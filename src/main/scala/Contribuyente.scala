@@ -23,3 +23,15 @@ case class Contribuyente(
 //  - apply, que no reciba ningún parámetro y que devolverá una instancia de la clase Contribuyente con aquellos campos que sean:
 //     del tipo Int inicializados a -1
 //     del tipo String inicializado a “desconocido
+object Contribuyente {
+  def imprimeDatos(c: Contribuyente): Unit = println(s"${c.workclass} - ${c.occupation} - ${c.nativeCountry} - ${c.income}\n")
+  
+  def apply(): Contribuyente = {
+    new Contribuyente(
+      -1, "desconocido", "desconocido", -1, "desconocido",
+      "desconocido", "desconocido", "desconocido", "desconocido", -1,
+      -1, -1, "desconocido", "desconocido"
+    )
+  }
+}
+
